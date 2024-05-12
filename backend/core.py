@@ -14,7 +14,7 @@ def run_llm(query: str, chat_history: List[Tuple[str, Any]] = []) -> Any:
     docsearch = PineconeVectorStore.from_existing_index(
         index_name=os.environ["PINECONE_INDEX_NAME"], embedding=embeddings
     )
-    chat = ChatOpenAI(verbose=True, temperature=0)
+    chat = ChatOpenAI(verbose=True, temperature=0.3)
 
     # qa = RetrievalQA.from_chain_type(llm=chat, chain_type="stuff", retriever=docsearch.as_retriever(), return_source_documents=True)
     # "stuff" takes context and plugs it into our query
