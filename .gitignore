@@ -1,0 +1,5 @@
+*.env
+*.conda
+langchain-docs/
+Pipfile.lock
+Pipfile
